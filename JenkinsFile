@@ -12,14 +12,14 @@ pipeline {
                 echo 'Building SCM'
             }
         }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying from SCM'
-            }
-        }
         stage('Test') {
             steps {
-                echo 'Testing'
+                echo 'Testing Build code'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the changes'
             }
         }
         stage('Release') {
